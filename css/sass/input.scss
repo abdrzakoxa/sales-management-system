@@ -1,0 +1,31 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+/*buttons*/
+@import 'components/_buttons';
+/* grid*/
+@import 'layout/_grid.scss';
+/*classes */
+/* input */
+@import 'components/inpute.scss';
+
+.container {
+  width: 100%;
+  margin: auto;
+  padding: auto 15px;
+}
+
+.container{
+  @include media-to-up('xs'){
+    max-width: 540px;
+  };
+  @include media-to-up('sm'){
+    max-width: 720px;
+  };
+  @include media-to-up('md'){
+    max-width: 960px;
+  };
+  @include media-to-up('lg'){
+    max-width: 1140px;
+  };
+}

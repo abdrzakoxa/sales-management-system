@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAIA,YAAa;EC4HT,OAAY,EAAG,YAAiC;EAAhD,OAAY,EAAG,WAAiC;EAAhD,OAAY,EAAG,WAAiC;EAGlD,OAAY,EAAG,IAAsB;ED7HrC,SAAS,EAAE,MAAM;EACjB,eAAe,EAAE,MAAM;EACvB,UAAU,EAAE,IAAI;;AAChB,cAAC;EACC,MAAM,EAAE,MAAM",
+"sources": ["sass/settings.scss","sass/helpers/_mixins.scss"],
+"names": [],
+"file": "settings.css"
+}

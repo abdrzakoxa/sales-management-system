@@ -1,0 +1,132 @@
+.card {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  border-radius: .25rem;
+}
+.card .card-header {
+  padding: 16px 21px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+  background: rgba(0, 0, 0, 0.01);
+}
+.card .card-header .card-header-control {
+  float: right;
+}
+.card .card-header .card-header-control .card-control-view span {
+  cursor: pointer;
+}
+.card .card-header .card-header-control .card-control-view span:hover {
+  color: #258cd1;
+}
+.card .card-header .card-header-control .card-active {
+  color: #258cd1;
+}
+.card .card-body {
+  overflow: hidden;
+}
+.card .card-body .not-found-category {
+  padding: 18px 21px;
+  position: relative;
+  cursor: pointer;
+  color: #4e4e4e;
+}
+.card .card-body .card-category {
+  padding: 18px 21px;
+  position: relative;
+  cursor: pointer;
+}
+.card .card-body .card-category:not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+}
+.card .card-body .card-category h3 {
+  margin: 0;
+  color: #4e4e4e;
+  display: inline-block;
+  cursor: text;
+  font-weight: 500;
+}
+.card .card-body .card-category p {
+  margin: 18px 0 0;
+  cursor: text;
+}
+.card .card-body .card-category .card-control {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  -webkit-transform: translateY(-50%) ;
+  -moz-transform: translateY(-50%) ;
+  -ms-transform: translateY(-50%) ;
+  -o-transform: translateY(-50%) ;
+  transform: translateY(-50%) ;
+  -webkit-transition: all 0.3s ;
+  -moz-transition: all 0.3s ;
+  -ms-transition: all 0.3s ;
+  -o-transition: all 0.3s ;
+  transition: all 0.3s ;
+}
+.card .card-body .card-category .card-control a {
+  color: #666666;
+}
+.card .card-body .card-category .card-control a:hover {
+  color: #258cd1;
+}
+.card .card-body .card-category:hover .card-control {
+  right: 10px;
+}
+
+.card-category p {
+  margin: 6px 4px 10px !important;
+}
+
+.not-link {
+  color: #1f2280;
+  text-decoration: underline !important;
+}
+
+.notification-view {
+  background: #fff;
+  margin-top: 50px;
+  border: 1px solid #f5f5f5;
+  border-radius: 7px;
+  padding: 18px 22px;
+}
+.notification-view h3 {
+  margin: 0;
+  color: #4e4e4e;
+  display: inline-block;
+  cursor: text;
+  font-weight: 500;
+}
+.notification-view p {
+  margin: 8px 0 0;
+  cursor: text;
+}
+
+.not-date {
+  font-size: 85%;
+  margin-top: 10px;
+  color: #b3b3b3;
+  display: block;
+}
+.not-date i {
+  color: inherit;
+  font-size: 100%;
+  padding: 0 0 0 5px;
+  margin: 0;
+}
+
+/*# sourceMappingURL=notifications.css.map */

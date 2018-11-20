@@ -1,0 +1,455 @@
+@include crossSelector('::placeholder' , moz webkit ms){
+  color: #5a5a5a;
+}
+
+
+input:-webkit-autofill{
+    @include crossProperty('text-fill-color' , darken($mainColor,25%) ,  webkit);
+    @include crossProperty('box-shadow' , '0 0 0 30px white inset' ,  webkit);
+}
+
+.form-style {
+  border: 1px solid #ddd;
+  padding: 13px;
+  padding-top: 30px;
+  position: relative;
+  margin-top: 40px;
+  background: #fff;
+  .form-title{
+    position: absolute;
+    top: -22px;
+    z-index: 2;
+    left: 13px;
+    background: $mainColor;
+    color: #fff;
+    cursor: default;
+  }
+}
+
+.action-product{
+  position: relative;
+  .name{
+    .name-label{
+      color: $inputColor;
+      cursor: default;
+      width: 90%;
+      @include media-to-down('md'){
+          overflow: hidden;
+      }
+    }
+  }
+  .action-close {
+    position: absolute;
+    right: 0;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    display: none;
+    transition: all .2s;
+    cursor: pointer;
+    color: black;
+    opacity: 0.1;
+    &:hover{
+      opacity: .6;
+    }
+  }
+  &:hover .action-close{
+    display: inline-block;
+  }
+  .actions-product-btn{
+    margin-right: 10px;
+    color: #333;
+    cursor: pointer;
+  }
+}
+
+.input-image-profile {
+  margin-top: 20px;
+  display: inline-block;
+  position: relative;
+  border-radius: 100%;
+  overflow: hidden;
+  @include crossProperty(transform,translateX(-50%), webkit moz ms o);
+  right: -50%;
+  *{
+
+    cursor: pointer;
+  }
+  input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    z-index: 10;
+  }
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #fff;
+    opacity: 0;
+    cursor: pointer;
+    @include crossProperty(transition, opacity .3s, webkit o moz ms);
+  }
+  &:hover:after{
+    opacity: .4;
+  }
+}
+
+.input-group-s {
+  width: auto;
+  height: 40px;
+  display: inline-block;
+  position: relative;
+  line-height: 40px;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #e7e7e7;
+
+
+
+
+  &:after{
+    position: absolute;
+    right: 6px;
+    top: 50%;
+    @include crossProperty(transform,translateY(-50%), webkit moz ms o);
+
+  }
+  &.radio-g{
+    label{
+      position: relative !important;
+      cursor: default;
+    }
+    .checkmark-p{
+      position: relative !important;
+      display: inline-block;
+      margin: 0;
+      .checkmark-c{
+        height: 12px;
+        width: 12px;
+        background: #ddd;
+        display: inline-block;
+        border-radius: 100%;
+        position: relative;
+        margin: 0 3px 0 11px;
+        &:after {
+          content: '';
+          width: 4px;
+          height: 4px;
+          background: #fff;
+          display: none;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include crossProperty(transform,translate(-50%,-50%), webkit moz ms o);
+          border-radius: 100%;
+        }
+      }
+      input:checked ~ .checkmark-c{
+        background-color: $mainColor;
+      }
+
+      input:checked ~ .checkmark-c:after{
+        display: inline-block;
+
+      }
+      input[type='radio']{
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+  &.checkbox-g{
+    position: relative !important;
+    display: inline-block;
+    height: auto;
+    label{
+      position: relative !important;
+      cursor: default;
+    }
+    .checkmark-p{
+      position: relative !important;
+      display: block;
+      margin: 0;
+      .checkbox-c{
+        height: 15px;
+        width: 15px;
+        background: #ddd;
+        display: inline-block;
+        position: relative;
+        margin: 0 3px 0 11px;
+        i{
+          font-size: 12px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          color: #fff;
+          display: none;
+        }
+      }
+      input:checked ~ .checkbox-c{
+        background-color: $mainColor;
+      }
+
+      input:checked ~ .checkbox-c i{
+        display: inline-block;
+
+      }
+      input[type='checkbox']{
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+
+  input[type='file']{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+
+  span:not(.heading-input){
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 12px;
+    color: #5a5a5a;
+    cursor: pointer;
+    @include crossProperty(user-select, none, webkit moz ms);
+  }
+
+  .heading-input{
+    color: $inputColor;
+    width: 100%;
+    font-size: 15px;
+  }
+
+
+  select {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    color: $inputColor;
+  }
+
+
+  label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 12px;
+    color: #5a5a5a;
+    cursor: text;
+    @include crossProperty(transition, all .2s, webkit o moz ms);
+    @include crossProperty(user-select, none, webkit moz ms);
+
+  }
+
+  .is_focus {
+    top: -22px;
+    left: -5px;
+    font-size: 13px;
+    z-index: 1000;
+    color: $inputColor;
+  }
+  input:not([type='radio']) {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    padding: 0 10px;
+    background: transparent;
+    color: $inputColor;
+    caret-color: #5a5a5a;
+  }
+
+}
+
+.sign-success{
+  &::after{
+    content: '\f058';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    color: darken($successBackground,25%);
+
+  }
+}
+
+.sign-spinner{
+  &::after{
+    content: '\f111';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 400;
+    color: $mainColor;
+    animation: opacityChange .6s linear .6s infinite alternate;
+  }
+}
+
+.sign-error{
+  &::after{
+    content: '\f06a';
+    font-family: 'Font Awesome\ 5 Free';
+    font-weight: 900;
+    color: darken($errorBackground,25%);
+  }
+}
+
+.input-submit-p{
+  width:100%;
+  input , button{
+    float: right;
+  }
+}
+
+.Vivron:after{
+  animation: errorInputSubmit .1s linear .1s 3 alternate;
+
+}
+
+.Vivron_input{
+  animation: errorInputSubmit .1s linear .1s 3 alternate;
+}
+
+@keyframes errorInputSubmit {
+  0% {right: 6px;}
+  25% {right: 10px;}
+  50% {right: 2px;}
+  100% {right: 10px;}
+}
+
+@keyframes opacityChange {
+  from{ opacity: 1 ;}
+  to{opacity: 0;}
+}
+
+
+
+
+
+
+
+
+///        this is a input border old
+
+
+
+
+
+
+/////
+//
+//$i: 1;
+//$c: 2;
+//
+//@include media-to-only('xl') {
+//  @for $i from 1 through 8 {
+//    &:nth-of-type(#{$c}) {
+//      border-left: $borderInput;
+//      border-right: $borderInput;
+//      $c: $c + 3;
+//    }
+//  }
+//}
+//
+//// md to up
+//
+//@include media-to-up('md') {
+//  &.col-md-up-2:nth-child(odd) {
+//    border-left: none !important;
+//    border-right: $borderInput;
+//  }
+//}
+//
+//
+//// md to down
+//
+//
+//@include media-to-down('lg') {
+//  &:nth-child(odd) {
+//    border-left: $borderInput;
+//    border-right: none;
+//  }
+//}
+//
+//@include media-to-down('md') {
+//  &:nth-child(odd) {
+//    border-left: none !important;
+//    border-right: none !important;
+//  }
+//}
+
+
+// custems inputs
+
+// range
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: $mainColor;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: $mainColor;
+  cursor: pointer;
+}
+
+.slidecontainer{
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+// classic in input
+
+.b-input-full{
+  border-left: $borderInput;
+  border-right: $borderInput;
+
+}

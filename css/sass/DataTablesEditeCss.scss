@@ -1,0 +1,118 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+@import 'components/_buttons';
+
+
+$borderTable: 1px solid #ddd;
+
+.sorting_1{
+  background-color: inherit !important;
+}
+
+
+table.dataTable{
+  border: 1px solid #ddd !important;
+  display: inline-table;
+  display: -moz-inline-table;
+  margin-top: 16px;
+  thead {
+
+    color: #353535;
+    th{
+      border-bottom: $borderTable !important;
+      white-space: nowrap;
+    }
+  }
+  tbody{
+    td{
+      border-bottom: $borderTable !important;
+      padding: 10px 4px !important;
+      text-align: center;
+      bdi{
+        white-space: nowrap;
+      }
+      &:last-child {
+        white-space: nowrap;
+        a {
+          color: lighten($grayColor, 15%);
+
+          &:first-child {
+            margin-right: 4px;
+          }
+          &:last-child {
+            margin-left: 4px;
+          }
+          &:hover {
+            color: $mainColor;
+          }
+        }
+      }
+
+    }
+
+    tr:last-child td{
+      border-bottom: none !important;
+
+    }
+  }
+
+}
+
+table .odd{
+  background-color: #fff !important;
+  &:hover{
+    background-color: #fff !important;
+
+  }
+}
+
+table.dataTable.hover tbody .even:hover, table.dataTable.display tbody .even:hover{
+  background-color: #fff !important;
+  &:hover{
+    background-color: #fff !important;
+  }
+}
+
+
+table.dataTable{
+  border: 1px solid #ddd;
+  *{
+    border: none !important;
+  }
+  //tbody tr:first-child td{
+  //  border-top: 1px solid #ddd !important;
+  //}
+}
+
+
+table.dataTable tbody tr:last-child td{
+  border-bottom: none;
+}
+
+
+table.dataTable tbody{
+  color: $grayColor;
+}
+
+.dataTables_wrapper .dataTables_filter input{
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover{
+  padding: 3px 13px;
+  background: $mainColor;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+
+@include media-to-down('lg'){
+
+  .dataTables_wrapper{
+    overflow: auto;
+  }
+}

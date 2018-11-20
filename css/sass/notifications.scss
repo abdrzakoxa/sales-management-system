@@ -1,0 +1,49 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+@import 'components/_cards';
+
+.card-category {
+  p{
+    margin: 6px 4px 10px !important;
+  }
+}
+
+.not-link{
+  color: #1f2280;
+  text-decoration: underline !important;
+}
+
+.notification-view{
+  background: #fff;
+  margin-top: 50px;
+  border: 1px solid #f5f5f5;
+  border-radius: 7px;
+  padding: 18px 22px;
+  h3{
+    margin: 0;
+    color: #4e4e4e;
+    display: inline-block;
+    cursor: text;
+    font-weight: 500;
+  }
+  p{
+    margin: 8px 0 0;
+    cursor: text;
+  }
+}
+
+.not-date {
+  font-size: 85%;
+  margin-top: 10px;
+  color: darken(#fff,30%);
+  display: block;
+  i {
+    color: inherit;
+    font-size: 100%;
+    padding: 0 0 0 5px;
+    margin: 0;
+  }
+
+}
+

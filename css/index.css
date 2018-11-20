@@ -1,0 +1,296 @@
+.chart_parent {
+  width: 400px;
+  height: 400px;
+}
+
+.chart-parent {
+  margin: auto -5px;
+  margin-top: 5px;
+}
+.chart-parent * {
+  -webkit-user-select: none ;
+  -moz-user-select: none ;
+  -ms-user-select: none ;
+  user-select: none ;
+}
+.chart-parent .chart-counts {
+  position: relative;
+  padding: 14px;
+  background: #3498db;
+  margin: 5px;
+  height: 100;
+  border-radius: 4px;
+}
+.chart-parent .chart-counts .line-number {
+  align-items: center;
+  white-space: nowrap;
+  height: 100%;
+}
+.chart-parent .chart-counts .chart-number {
+  font-size: 40px;
+  float: left;
+  color: rgba(255, 255, 255, 0.8);
+}
+.chart-parent .chart-counts .chart-text {
+  color: rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: 6px;
+  top: 5px;
+  font-size: small;
+}
+.chart-parent .chart-counts i {
+  right: 14px;
+  font-size: 70px;
+  color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+}
+.chart-parent .total-sales {
+  background-color: #2ecc71;
+  -webkit-box-shadow: inset 0 0 5px #25a25a ;
+  -webkit-box-shadow: inset 0 0 5px #25a25a ;
+  -ms-box-shadow: inset 0 0 5px #25a25a ;
+  -o-box-shadow: inset 0 0 5px #25a25a ;
+  box-shadow: inset 0 0 5px #25a25a ;
+}
+.chart-parent .total-purchases {
+  background-color: #3498db;
+  -webkit-box-shadow: inset 0 0 5px #217dbb ;
+  -webkit-box-shadow: inset 0 0 5px #217dbb ;
+  -ms-box-shadow: inset 0 0 5px #217dbb ;
+  -o-box-shadow: inset 0 0 5px #217dbb ;
+  box-shadow: inset 0 0 5px #217dbb ;
+}
+.chart-parent .total-clients {
+  background-color: #e74c3c;
+  -webkit-box-shadow: inset 0 0 5px #d62c1a ;
+  -webkit-box-shadow: inset 0 0 5px #d62c1a ;
+  -ms-box-shadow: inset 0 0 5px #d62c1a ;
+  -o-box-shadow: inset 0 0 5px #d62c1a ;
+  box-shadow: inset 0 0 5px #d62c1a ;
+}
+.chart-parent .total-suppliers {
+  background-color: #f39c12;
+  -webkit-box-shadow: inset 0 0 5px #c87f0a ;
+  -webkit-box-shadow: inset 0 0 5px #c87f0a ;
+  -ms-box-shadow: inset 0 0 5px #c87f0a ;
+  -o-box-shadow: inset 0 0 5px #c87f0a ;
+  box-shadow: inset 0 0 5px #c87f0a ;
+}
+
+.charts-js {
+  grid-template-columns: 35% 35% 30%;
+  margin: auto -5px;
+}
+.charts-js .chart-box:not(.chart-calender) {
+  background: #fff;
+  margin: 5px;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25) ;
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25) ;
+  -ms-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25) ;
+  -o-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.25) ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content {
+  padding: 10px 25px;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links {
+  justify-content: space-around;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  color: #fff;
+  padding: 19px 0;
+  -webkit-transition: all 0.3s ;
+  -moz-transition: all 0.3s ;
+  -ms-transition: all 0.3s ;
+  -o-transition: all 0.3s ;
+  transition: all 0.3s ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link i {
+  font-size: 20px;
+  display: block;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link span {
+  font-size: 14px;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(1) {
+  background: #8e44ad;
+  -webkit-box-shadow: inset 0 0 5px #703688 ;
+  -webkit-box-shadow: inset 0 0 5px #703688 ;
+  -ms-box-shadow: inset 0 0 5px #703688 ;
+  -o-box-shadow: inset 0 0 5px #703688 ;
+  box-shadow: inset 0 0 5px #703688 ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(1):hover {
+  background-color: #823e9e;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(2) {
+  background: #2980b9;
+  -webkit-box-shadow: inset 0 0 5px #20638f ;
+  -webkit-box-shadow: inset 0 0 5px #20638f ;
+  -ms-box-shadow: inset 0 0 5px #20638f ;
+  -o-box-shadow: inset 0 0 5px #20638f ;
+  box-shadow: inset 0 0 5px #20638f ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(2):hover {
+  background-color: #2574a8;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(3) {
+  background: #1abc9c;
+  -webkit-box-shadow: inset 0 0 5px #148f77 ;
+  -webkit-box-shadow: inset 0 0 5px #148f77 ;
+  -ms-box-shadow: inset 0 0 5px #148f77 ;
+  -o-box-shadow: inset 0 0 5px #148f77 ;
+  box-shadow: inset 0 0 5px #148f77 ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(3):hover {
+  background-color: #18aa8d;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(4) {
+  background: #2c3e50;
+  -webkit-box-shadow: inset 0 0 5px #1a252f ;
+  -webkit-box-shadow: inset 0 0 5px #1a252f ;
+  -ms-box-shadow: inset 0 0 5px #1a252f ;
+  -o-box-shadow: inset 0 0 5px #1a252f ;
+  box-shadow: inset 0 0 5px #1a252f ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(4):hover {
+  background-color: #253443;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(5) {
+  background: #c0392b;
+  -webkit-box-shadow: inset 0 0 5px #962d22 ;
+  -webkit-box-shadow: inset 0 0 5px #962d22 ;
+  -ms-box-shadow: inset 0 0 5px #962d22 ;
+  -o-box-shadow: inset 0 0 5px #962d22 ;
+  box-shadow: inset 0 0 5px #962d22 ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(5):hover {
+  background-color: #af3427;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(6) {
+  background: #27ae60;
+  -webkit-box-shadow: inset 0 0 5px #1e8449 ;
+  -webkit-box-shadow: inset 0 0 5px #1e8449 ;
+  -ms-box-shadow: inset 0 0 5px #1e8449 ;
+  -o-box-shadow: inset 0 0 5px #1e8449 ;
+  box-shadow: inset 0 0 5px #1e8449 ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(6):hover {
+  background-color: #239d57;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(7) {
+  background: #cd6133;
+  -webkit-box-shadow: inset 0 0 5px #a54d28 ;
+  -webkit-box-shadow: inset 0 0 5px #a54d28 ;
+  -ms-box-shadow: inset 0 0 5px #a54d28 ;
+  -o-box-shadow: inset 0 0 5px #a54d28 ;
+  box-shadow: inset 0 0 5px #a54d28 ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(7):hover {
+  background-color: #bd592e;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(8) {
+  background: #474787;
+  -webkit-box-shadow: inset 0 0 5px #353566 ;
+  -webkit-box-shadow: inset 0 0 5px #353566 ;
+  -ms-box-shadow: inset 0 0 5px #353566 ;
+  -o-box-shadow: inset 0 0 5px #353566 ;
+  box-shadow: inset 0 0 5px #353566 ;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-content .dash-quick-links .quick-link:nth-of-type(8):hover {
+  background-color: #40407a;
+}
+.charts-js .chart-box:not(.chart-calender) .last-sales-content {
+  padding: 0;
+}
+.charts-js .chart-box:not(.chart-calender) .chart-title {
+  background: #fafafa;
+  padding: 10px 22px;
+  color: #404040;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) ;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) ;
+  -ms-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) ;
+  -o-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) ;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25) ;
+}
+.charts-js .chart-left > div {
+  margin: 0 0 10px 0 !important;
+}
+.charts-js .quick-links {
+  grid-area: 1/1/1 span / 3 span;
+  align-self: center;
+}
+.charts-js .info-sales {
+  grid-area: 2/1/1 span / 2 span;
+  align-self: start;
+}
+.charts-js .chart-left {
+  grid-area: 2/3/4 span/1 span;
+  align-self: start;
+  margin: 5px;
+}
+.charts-js .last-sales {
+  grid-area: 3/1/2 span / 2 span;
+  align-self: start;
+}
+.charts-js .best-sales {
+  grid-area: 5/2/1 span/1 span;
+  align-self: start;
+}
+.charts-js .expenses-profits {
+  grid-area: 5/1/1 span/1 span;
+  align-self: start;
+}
+
+.pignose-calendar {
+  width: 100%;
+  max-width: 100%;
+}
+
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-custom thead {
+  border-bottom: 1px solid #e7e7e7;
+}
+.table-custom thead tr th {
+  padding: 5px 0;
+}
+.table-custom tbody tr td {
+  text-align: center;
+  padding: 5px 0;
+}
+
+@media (max-width: 991.98px) {
+  .charts-js .quick-links {
+    grid-area: 1/1/1 span / 3 span;
+    align-self: center;
+  }
+  .charts-js .chart-left {
+    grid-area: 2/1/1 span / 3 span;
+    align-self: start;
+    margin: 5px;
+  }
+  .charts-js .last-sales {
+    grid-area: 3/1/1 span/3 span;
+    align-self: start;
+  }
+  .charts-js .best-sales {
+    grid-area: 4/1/1 span/3 span;
+    align-self: start;
+  }
+  .charts-js .info-sales {
+    grid-area: 5/1/1 span / 3 span;
+    align-self: start;
+  }
+  .charts-js .expenses-profits {
+    grid-area: 6/1/1 span/3 span;
+    align-self: start;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,149 @@
+//@media (min-width: 576px) { ... }
+//@media (min-width: 768px) { ... }
+//@media (min-width: 992px) { ... }
+//@media (min-width: 1200px) { ... }
+
+
+@mixin media-to-up($media){
+  @if($media == 'xs'){
+    @media (min-width: $xs-tow) {
+      @content;
+    }
+  }
+  @else if($media == 'sm'){
+    @media (min-width: $sm-tow) {
+      @content;
+    }
+  }
+  @else if($media == 'md'){
+    @media (min-width: $md-tow) {
+      @content;
+    }
+  }
+  @else if($media == 'lg'){
+    @media (min-width: $lg-tow) {
+      @content;
+    }
+  }
+}
+
+//@media (max-width: 575.98px) { ... }
+//@media (min-width: 576px) and (max-width: 767.98px) { ... }
+//@media (min-width: 768px) and (max-width: 991.98px) { ... }
+//@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+//@media (min-width: 1200px) { ... }
+
+@mixin media-to-only($media){
+  @if($media == 'xs'){
+    @media (max-width: $xs-only) {
+      @content;
+    }
+  }
+  @else if($media == 'sm'){
+    @media (min-width: $sm-min-only) and (max-width: $sm-max-only) {
+      @content;
+    }
+  }
+  @else if($media == 'md'){
+    @media (min-width: $md-min-only) and (max-width: $md-max-only) {
+      @content;
+    }
+  }
+  @else if($media == 'lg'){
+    @media (min-width: $lg-min-only) and (max-width: $lg-min-only) {
+      @content;
+    }
+  }
+  @else if($media == 'xl'){
+    @media (min-width: $lg-only){
+      @content;
+    }
+  }
+}
+
+
+//@media (max-width: 575.98px)
+//@media (max-width: 767.98px)
+//@media (max-width: 991.98px)
+//@media (max-width: 1199.98px)
+
+
+@mixin media-to-down($media){
+  @if($media == 'xs'){
+    @media (max-width: $xs-tow) {
+      @content;
+    }
+  }
+  @else if($media == 'sm'){
+    @media (max-width: $sm-tow) {
+      @content;
+    }
+  }
+  @else if($media == 'md'){
+    @media (max-width: $md-tow) {
+      @content;
+    }
+  }
+  @else if($media == 'lg'){
+    @media (max-width: $lg-tow) {
+      @content;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+//support
+
+
+@mixin crossProperty($property,$value , $support, $options:null){
+  @each $supp in $support{
+    -#{$supp}-#{$property} : #{$value} $options;
+  }
+  #{$property} : #{$value} $options;
+}
+
+
+
+@mixin crossValue($property,$value , $support){
+  @each $supp in $support{
+    #{$property} : -#{$supp}-$value;
+  }
+  #{$property} : $value;
+}
+
+
+
+@mixin crossManyValue($property,$value , $support,$options:null){
+  $lists : (($value)($support));
+  $val : nth($lists , 1);
+  $supp : nth($lists , 2);
+  $i : 1;
+  @each $upp in $supp {
+    #{$property} : - $upp -  nth($val , $i) $options;
+    $i : $i + 1;
+  }
+  #{$property} : nth($val , 1) $options;
+}
+
+
+
+@mixin crossSelector($selector , $support){
+  @each $supp in $support{
+    #{-$supp}-#{$selector}{
+      @content
+    }
+  }
+  #{$selector}{
+    @content
+  }
+}
+
+
+

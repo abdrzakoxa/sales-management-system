@@ -1,0 +1,101 @@
+// medias in my web
+$mediaListToUp : xs sm md lg ;
+
+$mediaListToDown : xs sm md lg ;
+
+$mediaListToOnly : xs sm md lg ;
+
+// end this
+
+
+
+$xs-tow : 575.98px;
+$sm-tow : 767.98px;
+$md-tow : 991.98px;
+$lg-tow : 1199.98px;
+
+$xs-only : 575.98px;
+
+$sm-min-only : 576px;
+$sm-max-only : 767.98px;
+
+$md-min-only : 768px;
+$md-max-only : 991.98px;
+
+$lg-min-only : 992px;
+$lg-max-only : 1199.98px;
+
+$lg-only : 1200px;
+
+//$OptionsMedia = all and ;
+
+
+$left: left;
+$right: left;
+
+// colors
+
+$iconMenuColor : darken(#fff,3%);
+
+$mainColor: #258cd1;
+
+$sideBarColorFont: lighten(#000 , 25%);
+
+$subCateHover: #E8E8E8;
+// gray lighten(#000 , 25%)
+// #258cd1
+// #34495e
+$grayColor : lighten(#000 , 25%);
+
+$bodyBackgroundColor : #fafafa;
+
+$sideBarColor : #fff;
+
+$boxShadowA : 0px 0 22px #bbbbbb;
+
+$dropMenuColor : #545454;
+
+
+// inputs
+
+
+$borderInput: 1px solid #e7e7e7;
+
+$borderInputColor : #e7e7e7;
+
+$inputColor: lighten(#000, 20%);
+
+// box Shadows
+
+
+$boxShadowPopUp: 0 4px 8px #afafaf;
+
+// cards
+
+$cardInput : 1px solid rgba(0,0,0,.125);
+
+$cardHeaderBackgroundColor : rgba(0,0,0,0.01);
+
+
+//links
+
+$linkColor : #1f2280;
+
+
+// Alerts
+
+$errorColor: #520007;
+$errorBackground: #f8d7da;
+$errorBorderColor: #f8d7da;
+
+$successBackground: #d4edda ;
+$successColor: #155724;
+$successBorderColor: #c3e6cb ;
+
+$infoBackground: #d1ecf1 ;
+$infoColor: #0c5460 ;
+$infoBorderColor: #bee5eb ;
+
+$warningBackground: #fff3cd ;
+$warningColor: #856404 ;
+$warningBorderColor: #ffeeba ;

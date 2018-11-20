@@ -1,0 +1,415 @@
+@import '../helpers/_variables.scss';
+@import '../helpers/_functions.scss';
+@import '../helpers/_mixins.scss';
+
+$mainColor: #9b59b6;
+$sideBarColor: #fff;
+$sideBarColorFont: $grayColor;
+$subCateHover: darken($sideBarColor,10%);
+$boxShadowA: 0px 0 22px #9e9e9e;
+$bodyColor: #ddd;
+$iconMenuColor: #fff;
+.cover-login{
+  background: lighten($mainColor,10%);
+}
+
+
+.side-menu {
+  background: $sideBarColor;
+  *{
+    color: $grayColor;
+  }
+  @include crossProperty(box-shadow, $boxShadowA, webkit moz);
+  .user-info {
+    small {
+      color: #c9ce19 !important;
+    }
+    span {
+      color: $grayColor;
+    }
+  }
+  .menu, ul {
+    > li {
+      &::after {
+        background: $mainColor;
+      }
+      &:hover:after {
+        left: 0;
+
+      }
+    }
+    li {
+      color: $sideBarColorFont;
+      a {
+        background: $sideBarColor;
+
+        i:first-child {
+          color: $mainColor;
+        }
+        &:hover {
+          background-color: $subCateHover !important; // #E8E8E8
+        }
+        .icon-to-down {
+          &:hover {
+            color: $mainColor;
+          }
+        }
+      }
+      ul {
+        li a {
+          &:hover {
+            //background-color: lighten($subCateHover,5%) !important;
+            background-color: $sideBarColor !important;
+            color: $mainColor;
+          }
+        }
+      }
+    }
+  }
+}
+
+.up-menu {
+
+  background: $mainColor;
+
+  .menu-end{
+    .profile-cog{
+      .U-menu {
+        @include crossProperty(box-shadow, $boxShadowPopUp, webkit moz);
+        background: $dropMenuColor;
+        &::before {
+          border-bottom-color: $dropMenuColor;
+        }
+        li{
+          a {
+            &:hover {
+              background-color: darken($dropMenuColor, 5%);
+            }
+          }
+        }
+      }
+    }
+    .notifications {
+      .notification-box {
+        @include crossProperty(box-shadow, $boxShadowPopUp, webkit moz);
+      }
+    }
+
+    >.profile-cog, .notifications > i ,  > i , > a, .notifications , #scanner-barcode{
+      color: $iconMenuColor;
+    }
+  }
+  .up-m-left{
+    .control-menu{
+      color: $iconMenuColor;
+
+    }
+
+    span{
+      color: $iconMenuColor;
+    }
+
+  }
+
+}
+.active > a{
+  @include crossProperty(box-shadow ,  inset 0 0 15px rgba(0, 0, 0, 0.03) , webkit moz );
+  background-color: $subCateHover !important; // #E8E8E8
+}
+
+
+
+
+
+/// scroll
+
+/* width */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: lighten($mainColor,20%);
+  @include crossProperty(border-raduis, 10px, webkit moz );
+  border-radius: 10px;
+  border: 1px solid #fff;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $mainColor;
+}
+
+
+.progress-load-page {
+  @include crossProperty(box-shadow, 0 0 6px darken($mainColor,20%), webkit moz );
+  background: darken($mainColor,20%);
+}
+
+
+[data-top-title] {
+  &::after {
+    background: $grayColor !important;
+  }
+  &::before {
+    border-top: 6px solid $grayColor !important;
+  }
+}
+
+[data-bottom-title] {
+  position: relative;
+  &::after {
+    color: #fff !important;
+    background: $grayColor !important;
+  }
+  &::before {
+    border-bottom: 6px solid $grayColor !important;
+
+  }
+
+}
+
+[data-bottom-title-quantity-product] {
+  &::after {
+    color: #fff !important;
+    background: $grayColor !important;
+  }
+  &::before {
+    border-bottom: 6px solid $grayColor !important;
+  }
+}
+
+
+.card{
+  background-color: #fff;
+  border: $cardInput;
+  .card-header{
+    border-bottom: $cardInput;
+    background: $cardHeaderBackgroundColor;
+    .card-header-control{
+      .card-control-view span{
+        &:hover{
+          color: $mainColor;
+        }
+      }
+      .card-active{
+        color: $mainColor;
+      }
+    }
+  }
+  .card-body{
+    overflow: hidden;
+    .not-found-category{
+      padding: 18px 21px;
+      position: relative;
+      cursor: pointer;
+      color: #4e4e4e;
+    }
+    .card-category{
+      &:not(:last-child){
+        border-bottom: $cardInput;
+      }
+      .card-control {
+        a{
+          color: lighten($grayColor, 15%);
+          &:hover{
+            color: $mainColor;
+          }
+        }
+      }
+
+    }
+  }
+}
+
+/// inputs
+
+
+@include crossSelector('::placeholder' , moz webkit ms){
+  color: #5a5a5a;
+}
+
+
+input:-webkit-autofill{
+  @include crossProperty('text-fill-color' , darken($mainColor,25%) ,  webkit);
+}
+
+.form-style {
+  border: 1px solid #ddd;
+  background: #fff;
+  .form-title{
+    background: $mainColor;
+    color: #fff;
+  }
+}
+
+.action-product{
+  .action-close {
+    color: black;
+
+  }
+  .actions-product-btn{
+    color: #333;
+  }
+}
+
+.input-image-profile {
+  &::after {
+    background: #fff;
+  }
+}
+
+.input-group-s {
+  border-bottom: 1px solid #e7e7e7;
+
+  &.radio-g{
+    .checkmark-p{
+      .checkmark-c{
+        background: #ddd;
+        &::after {
+          background: #fff;
+        }
+      }
+      input:checked ~ .checkmark-c{
+        background-color: $mainColor;
+      }
+    }
+  }
+  &.checkbox-g{
+    .checkmark-p{
+      .checkbox-c{
+        background: #ddd;
+        i{
+          color: #fff;
+        }
+      }
+      input:checked ~ .checkbox-c{
+        background-color: $mainColor;
+      }
+
+    }
+  }
+
+  span:not(.heading-input){
+    color: #5a5a5a;
+  }
+
+  .heading-input{
+    color: $inputColor;
+  }
+
+
+  select {
+    color: $inputColor;
+  }
+
+
+  label {
+    color: #5a5a5a;
+  }
+
+  .is_focus {
+    color: $inputColor;
+  }
+  input:not([type='radio']) {
+    color: $inputColor;
+  }
+
+}
+
+.sign-spinner{
+  &::after{
+    color: $mainColor;
+  }
+}
+
+
+.slider::-webkit-slider-thumb {
+  background: $mainColor;
+}
+
+.slider::-moz-range-thumb {
+  background: $mainColor;
+}
+
+.b-input-full{
+  border-left: $borderInput;
+  border-right: $borderInput;
+
+}
+
+
+// buttons
+
+
+.b-primary-upt{
+  color: #fff;
+  margin-bottom: 25px;
+  background: $mainColor;
+  @include crossProperty(box-shadow , inset 0 0 2px darken($mainColor,8%) , webkit webkit ms o);
+  &:hover{
+    background: darken($mainColor,8%);
+  }
+}
+
+.b-primary-submit{
+  color: #fff;
+  background: $mainColor;
+  @include crossProperty(box-shadow , inset 0 0 2px darken($mainColor,8%) , webkit webkit ms o);
+  &:hover{
+    background: darken($mainColor,8%);
+  }
+}
+
+.b-primary-icon {
+  color: #fff;
+  background: $mainColor;
+  @include crossProperty(box-shadow , inset 0 0 2px darken($mainColor,8%) , webkit webkit ms o);
+  &:hover{
+    background: darken($mainColor,10%);
+  }
+}
+
+.b-active-icon{
+  background: darken($mainColor,10%);
+}
+
+
+// on direct
+
+.pignose-calendar.pignose-calendar-blue .pignose-calendar-top{
+  background: $mainColor;
+}
+
+.pignose-calendar.pignose-calendar-blue .pignose-calendar-body .pignose-calendar-row .pignose-calendar-unit.pignose-calendar-unit-active a{
+  background: $mainColor;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current {
+  background: $mainColor;
+  &:hover {
+    background: darken($mainColor, 10%);
+  }
+}
+
+
+.light{
+  color: #fafafa !important;
+}
+.dark{
+  color: #191f24 !important;
+}
+.blue{
+  color: #4aa3df !important;
+}
+.purple{
+  color: #b07cc6 !important;
+}

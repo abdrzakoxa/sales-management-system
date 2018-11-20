@@ -1,0 +1,80 @@
+.card{
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    @include crossManyValue(display , flex box flexbox , webkit webkit ms);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: $cardInput;
+    border-radius: .25rem;
+    .card-header{
+        padding: 16px 21px;
+        border-bottom: $cardInput;
+        background: $cardHeaderBackgroundColor;
+        .card-header-control{
+            float: right; /// changed in lang thanks
+            .card-control-view span{
+                cursor: pointer;
+                &:hover{
+                    color: $mainColor;
+                }
+            }
+            .card-active{
+                color: $mainColor;
+            }
+        }
+    }
+    .card-body{
+        overflow: hidden;
+        .not-found-category{
+            padding: 18px 21px;
+            position: relative;
+            cursor: pointer;
+            color: #4e4e4e;
+        }
+        .card-category{
+            padding: 18px 21px;
+            position: relative;
+            cursor: pointer;
+            &:not(:last-child){
+                border-bottom: $cardInput;
+            }
+            h3{
+                margin: 0;
+                color: #4e4e4e;
+                display: inline-block;
+                cursor: text;
+                font-weight: 500;
+            }
+            p{
+                margin: 18px 0 0;
+                cursor: text;
+            }
+            .card-control {
+                position: absolute;
+                top: 50%;
+                right: -40px; // CHANGE TO right
+                @include crossProperty(transform, translateY(-50%), webkit moz ms o);
+                @include crossProperty(transition, all .3s, webkit moz ms o);
+                a{
+                    color: lighten($grayColor, 15%);
+                    &:hover{
+                        color: $mainColor;
+                    }
+                }
+            }
+            &:hover{
+                & .card-control{
+                    right: 10px;
+                }
+            }
+        }
+    }
+}

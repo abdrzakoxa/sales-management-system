@@ -1,0 +1,402 @@
+.side-menu {
+  width: 18%;
+  height: 100%;
+  background: $sideBarColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px 0;
+  overflow: auto;
+  z-index: 99999;
+  @include crossProperty(box-shadow, $boxShadowA, webkit moz);
+  .user-info {
+    text-align: center;
+    padding: 8px;
+    img {
+      display: block;
+      margin: 0 auto;
+      @include crossProperty(box-shadow, 0 0 6px, webkit moz);
+      @include crossProperty(border-radius, 100%, webkit moz);
+    }
+    small{
+      display: inline-block;
+      margin-top: 4px;
+      color: #c9ce19 !important;
+    }
+    span{
+      display: block;
+      color: $grayColor;
+      margin-top: 10px;
+    }
+  }
+  
+  .menu , ul{
+    padding: 0;
+    margin:0;
+    >li{
+      position: relative;
+      &:after {
+        content: '';
+        height: 100%;
+        position: absolute;
+        @include crossProperty(border-radius, 2px, webkit moz);
+        left: -4px;
+        top: 0;
+        width: 4px;
+        background: $mainColor;
+        @include crossProperty(transition, all .3s, webkit moz ms o);
+      }
+      &:hover:after{
+        left: 0;
+
+      }
+    }
+    li{
+      color: $sideBarColorFont;
+      a {
+        display: block;
+        background: $sideBarColor;
+        padding: 12px 15px;
+        @include crossProperty(transition, background-color .5s, webkit moz ms o);
+        @extend %_a;
+        i:first-child{
+          padding-right: 10px;
+          color: $mainColor;
+        }
+        &:hover{
+          @include crossProperty(box-shadow ,  inset 0 0 15px rgba(0, 0, 0, 0.03) , webkit moz );
+          background-color: $subCateHover !important; // #E8E8E8
+        }
+        .icon-to-down{
+          float: right;
+          padding: 0;
+          font-size: 18px;
+          @include crossProperty(transition, 'color, transform .5s', webkit moz ms o);
+          &:hover{
+            @include crossProperty(transform, scale(1.2), webkit moz ms o);
+            color: $mainColor;
+          }
+        }
+      }
+      ul{
+        display: none;
+        li a{
+          padding-left: 25px; // lang
+          @include crossProperty(transition, color .5s, webkit moz ms o);
+          &:hover{
+            //background-color: lighten($subCateHover,5%) !important;
+            background-color: $sideBarColor !important;
+            color: $mainColor;
+          }
+        }
+
+      }
+    }
+  }
+}
+
+.up-menu {
+  width: 82%;
+  position: fixed;
+  right: 0;
+  top: 0;
+  background: $mainColor;
+  height: 60px;
+  z-index: 9999;
+  .menu-end{
+    float: right; // lang
+    margin-right: 25px; // lang
+    height: inherit;
+    .profile-cog{
+      font-weight: 500;
+      position: relative;
+      img{
+        vertical-align: middle;
+        @include crossProperty(border-radius, 100%, webkit moz);
+      }
+      .U-menu {
+        @include crossProperty(box-shadow, $boxShadowPopUp, webkit moz);
+        position: absolute;
+        color: #000;
+        background: $dropMenuColor;
+        margin: 0;
+        padding: 0;
+        top: 150%;
+        left: 50%;
+        display: none;
+        @include crossProperty(transform,translateX(-50%), webkit moz ms o);
+        &:before {
+          content: '';
+          border: 10px solid transparent;
+          border-bottom-color: $dropMenuColor;
+          display: inline-block;
+          position: absolute;
+          top: -20px;
+          left: 50%;
+          @include crossProperty(transform, translateX(-25%), webkit moz ms o);
+        }
+        li{
+          &:not(:last-child) a{
+            border-bottom: 1px solid #9c9c9c;
+          }
+          a {
+            white-space: nowrap;
+            padding: 10px;
+            display: inline-block;
+            width: 100%;
+            color: #fff;
+            text-align: center;
+            @include crossProperty(transition, background-color .5s, webkit moz ms o);
+            &:hover {
+              background-color: darken($dropMenuColor, 5%);
+            }
+          }
+        }
+      }
+    }
+    .notifications {
+      position: relative;
+      .notification-box {
+        width: 400px;
+        position: absolute;
+        background: #fff;
+        top: 43px;
+        left: calc(50% - 5px);
+        transform: translateX(-50%);
+        display: none;
+        @include crossProperty(box-shadow, $boxShadowPopUp, webkit moz);
+        border: 1px solid #d0d0d0;
+        &:before {
+          content: '';
+          border: 10px solid transparent;
+          border-bottom-color: #fff;
+          display: inline-block;
+          position: absolute;
+          top: -20px;
+          left: 50%;
+          @include crossProperty(transform, translateX(-25%), webkit moz ms o);
+        }
+        .not-heading {
+          padding: 10px 15px;
+          display: block;
+          font-size: 15px;
+          background: #F5F5F5;
+          color: #8090a0;
+          &:before{
+            content: '\f05a';
+            font-family: "Font Awesome 5 Free Solid";
+            padding-left: 5px; // lang v2
+          }
+        }
+        .not-show-all {
+          padding: 10px 15px;
+          text-align: center;
+          a {
+            color: $linkColor;
+            text-decoration: underline !important;
+          }
+        }
+        .not-body {
+          padding: 10px 15px;
+          &.not-found-notifications{
+            color: $grayColor;
+          }
+          .not-title {
+            color: $grayColor;
+            font-size: 15px;
+          }
+          .not-date {
+            font-size: 85%;
+            margin-top: 5px;
+            color: darken(#fff,30%);
+            display: block;
+            i {
+              color: inherit;
+              font-size: 100%;
+              padding: 0 10px 0px 5px;
+            }
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid darken(#fff,4%);
+          }
+        }
+        .not-found-notifications{
+          padding: 23px 0;
+          text-align: center;
+          i{
+            color: darken($errorBackground,20%);
+          }
+        }
+      }
+      .count-not{
+        position: absolute;
+        top: -6px;
+        border-radius: 100%;
+        right: -4px;
+        background: #FFC107;
+        width: 20px;
+        height: 20px;
+        text-align: center;
+        line-height: 20px;
+        color: #fff;
+      }
+    }
+    > i , > a, .notifications > i, .notifications span > i , #scanner-barcode{
+      font-size: 26px;
+    }
+    >.profile-cog, .notifications > i ,  > i , > a, .notifications , #scanner-barcode{
+      margin: 10px; // lang
+      cursor: pointer;
+      color: $iconMenuColor;
+      @include crossProperty(transition, color .3s, webkit moz ms o);
+      &:hover{
+        color: darken(#f1f1f1 , 5%);
+      }
+    }
+  }
+  .up-m-left{
+    .control-menu{
+      line-height: 60px;
+      font-size: 26px;
+      color: $iconMenuColor;
+      cursor: pointer;
+      margin-left: 20px;
+    }
+
+    span{
+      font-size: 27px;
+      color: $iconMenuColor;
+      margin-left: 15px;
+      margin-bottom: 4px;
+    }
+
+  }
+}
+
+// notifications box messages
+
+.notification-box-box{
+  position: fixed;
+  z-index: 12;
+  background: #fff;
+  bottom: 70px;
+  right: 50px;
+  padding: 10px 20px;
+  border-radius: 2px;
+  min-width: 400px;
+  @include crossProperty(box-shadow , 0 0 20px darken(#fff,20%) , webkit webkit ms o);
+  .not-date {
+    font-size: 85%;
+    margin-top: 10px;
+    color: darken(#fff,30%);
+    display: block;
+    i {
+      color: inherit;
+      font-size: 100%;
+      padding: 0 0 0 5px;
+      margin: 0;
+    }
+  }
+  p{
+    margin: 4px 0 10px 5px;
+  }
+  .notification-title{
+
+  }
+  .not-link{
+    color: #1f2280;
+    text-decoration: underline !important;
+  }
+  .close-not{
+    position: absolute;
+    top: 9px;
+    right: 12px;
+    color: #676767;
+    cursor: pointer;
+  }
+}
+
+
+// not icon
+
+.not_icon_1::after {
+  content: '\f007';
+  font-family: "Font Awesome 5 Free";
+}
+
+.not_icon_2::after {
+  content: '\f06a';
+  font-family: "Font Awesome 5 Free Solid";
+  color: #676767;
+}
+
+.not_icon_3::after {
+  content: '\f07a';
+  font-family: "Font Awesome 5 Free Solid";
+  color: #676767;
+}
+
+
+.not_icon {
+  padding: 5px 0 5px 5px;
+  display: inline-block;
+  color: $grayColor;
+}
+
+
+.clear-path{
+  width: 100%;
+  height: 40px;
+}
+
+
+body{
+  width: 82%;
+  float: right;
+  padding: 20px;
+}
+
+.active > a{
+  @include crossProperty(box-shadow ,  inset 0 0 15px rgba(0, 0, 0, 0.03) , webkit moz );
+  background-color: $subCateHover !important; // #E8E8E8
+}
+
+.active::after{
+  width: 4px;
+  left: 0 !important;
+}
+
+.DBIul > .child-menu{
+  display: block !important;
+}
+
+
+.close{ // lang
+  left: -18%;
+}
+
+
+@include media-to-down('sm'){
+  .side-menu{
+    width: 50%;
+    top: 60px;
+    left: 0;
+  }
+  .up-menu{
+    width: 100%;
+  }
+  body{
+    width: 100%
+  }
+
+  .close{ // lang
+    left: -50%;
+  }
+
+  .profile-cog{
+    >span{
+      display: none;
+    }
+  }
+
+}

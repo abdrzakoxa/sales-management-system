@@ -1,0 +1,16 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+
+.tab-control {
+  @include crossManyValue(display, flex box flexbox, webkit webkit ms);
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 15px;
+  a{
+    margin: 0 10px;
+  }
+}
+
+.tab-content > form{
+}

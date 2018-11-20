@@ -1,0 +1,14 @@
+.tab-control {
+  display: -webkit-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin-top: 15px;
+}
+.tab-control a {
+  margin: 0 10px;
+}
+
+/*# sourceMappingURL=settings.css.map */

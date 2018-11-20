@@ -1,0 +1,1 @@
+<span class="error-permission"><i class="fas fa-exclamation-triangle"></i> { text_error }</span>

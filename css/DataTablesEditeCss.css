@@ -1,0 +1,172 @@
+.b-primary-upt {
+  float: right;
+  color: #fff;
+  margin-bottom: 25px;
+  background: #258cd1;
+  -webkit-transition: background-color 0.5s ;
+  -webkit-transition: background-color 0.5s ;
+  -ms-transition: background-color 0.5s ;
+  -o-transition: background-color 0.5s ;
+  transition: background-color 0.5s ;
+  -webkit-box-shadow: inset 0 0 2px #1f75ae ;
+  -webkit-box-shadow: inset 0 0 2px #1f75ae ;
+  -ms-box-shadow: inset 0 0 2px #1f75ae ;
+  -o-box-shadow: inset 0 0 2px #1f75ae ;
+  box-shadow: inset 0 0 2px #1f75ae ;
+}
+.b-primary-upt:not(:first-child) {
+  margin-right: 16px;
+}
+.b-primary-upt:hover {
+  background: #1f75ae;
+}
+
+.bn {
+  cursor: pointer;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 10px;
+  -webkit-user-select: none ;
+  -moz-user-select: none ;
+  -ms-user-select: none ;
+  user-select: none ;
+  border: none;
+}
+
+.b-primary-submit {
+  padding: 10px 18px;
+  color: #fff;
+  background: #258cd1;
+  -webkit-transition: background-color 0.5s ;
+  -webkit-transition: background-color 0.5s ;
+  -ms-transition: background-color 0.5s ;
+  -o-transition: background-color 0.5s ;
+  transition: background-color 0.5s ;
+  -webkit-box-shadow: inset 0 0 2px #1f75ae ;
+  -webkit-box-shadow: inset 0 0 2px #1f75ae ;
+  -ms-box-shadow: inset 0 0 2px #1f75ae ;
+  -o-box-shadow: inset 0 0 2px #1f75ae ;
+  box-shadow: inset 0 0 2px #1f75ae ;
+}
+.b-primary-submit:hover {
+  background: #1f75ae;
+}
+
+.b-primary-icon {
+  padding: 9px 14px;
+  color: #fff;
+  font-size: 15px;
+  background: #258cd1;
+  -webkit-transition: background-color 0.5s ;
+  -webkit-transition: background-color 0.5s ;
+  -ms-transition: background-color 0.5s ;
+  -o-transition: background-color 0.5s ;
+  transition: background-color 0.5s ;
+  -webkit-box-shadow: inset 0 0 2px #1f75ae ;
+  -webkit-box-shadow: inset 0 0 2px #1f75ae ;
+  -ms-box-shadow: inset 0 0 2px #1f75ae ;
+  -o-box-shadow: inset 0 0 2px #1f75ae ;
+  box-shadow: inset 0 0 2px #1f75ae ;
+}
+.b-primary-icon:hover {
+  background: #1d6fa6;
+}
+
+.b-active-icon {
+  background: #1d6fa6;
+}
+
+.sorting_1 {
+  background-color: inherit !important;
+}
+
+table.dataTable {
+  border: 1px solid #ddd !important;
+  display: inline-table;
+  display: -moz-inline-table;
+  margin-top: 16px;
+}
+table.dataTable thead {
+  color: #353535;
+  background: #fff;
+}
+table.dataTable thead th {
+  border-bottom: 1px solid #ddd !important;
+  white-space: nowrap;
+}
+table.dataTable tbody td {
+  border-bottom: 1px solid #ddd !important;
+  padding: 10px 4px !important;
+  text-align: center;
+}
+table.dataTable tbody td bdi {
+  white-space: nowrap;
+}
+table.dataTable tbody td:last-child {
+  white-space: nowrap;
+}
+table.dataTable tbody td:last-child a {
+  color: #666666;
+}
+table.dataTable tbody td:last-child a:first-child {
+  margin-right: 4px;
+}
+table.dataTable tbody td:last-child a:last-child {
+  margin-left: 4px;
+}
+table.dataTable tbody td:last-child a:hover {
+  color: #258cd1;
+}
+table.dataTable tbody tr:last-child td {
+  border-bottom: none !important;
+}
+
+table .odd {
+  background-color: #fff !important;
+}
+table .odd:hover {
+  background-color: #fff !important;
+}
+
+table.dataTable.hover tbody .even:hover, table.dataTable.display tbody .even:hover {
+  background-color: #fff !important;
+}
+table.dataTable.hover tbody .even:hover:hover, table.dataTable.display tbody .even:hover:hover {
+  background-color: #fff !important;
+}
+
+table.dataTable {
+  border: 1px solid #ddd;
+}
+table.dataTable * {
+  border: none !important;
+}
+
+table.dataTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+table.dataTable tbody {
+  color: #404040;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+  padding: 6px 14px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current, .dataTables_wrapper .dataTables_paginate .paginate_button.current:hover {
+  padding: 3px 13px;
+  background: #258cd1;
+  color: #fff !important;
+  box-shadow: none !important;
+}
+
+@media (max-width: 1199.98px) {
+  .dataTables_wrapper {
+    overflow: auto;
+  }
+}
+
+/*# sourceMappingURL=DataTablesEditeCss.css.map */

@@ -1,0 +1,79 @@
+.preview-products {
+  max-width: 800px;
+  margin: auto;
+}
+.preview-products .box-content {
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  padding: 5px;
+  width: 100%;
+}
+.preview-products .box-content .bar-code {
+  text-align: center;
+}
+.preview-products .box-content .property_products {
+  padding: 10px;
+}
+.preview-products .invoice-info {
+  text-align: end;
+}
+.preview-products .company-info span {
+  margin-right: 10px;
+}
+.preview-products .company-name-head {
+  text-align: center;
+  padding: 20px 0 10px 0;
+  color: #404040;
+}
+.preview-products .client-info {
+  margin-bottom: 15px;
+}
+.preview-products .client-info span {
+  margin-right: 10px;
+}
+.preview-products .client-info, .preview-products .company-info, .preview-products .invoice-info {
+  padding: 10px 10px 0;
+}
+.preview-products .client-info span, .preview-products .company-info span, .preview-products .invoice-info span {
+  display: block;
+  line-height: 1.5;
+}
+.preview-products .table-custom {
+  border: 1px solid #e7e7e7;
+  border-collapse: collapse;
+}
+.preview-products .table-custom thead {
+  border-bottom: 1px solid #e7e7e7;
+}
+.preview-products .table-custom thead tr th {
+  padding: 5px 0;
+}
+.preview-products .table-custom tbody tr td {
+  text-align: center;
+  padding: 5px 0;
+}
+.preview-products .price_totals {
+  border-collapse: collapse;
+  margin-top: 15px;
+  border: 1px solid #e7e7e7;
+  border-bottom: 0;
+}
+.preview-products .price_totals tbody tr {
+  border-bottom: 1px solid #e7e7e7;
+}
+.preview-products .price_totals tbody tr td, .preview-products .price_totals tbody tr th {
+  text-align: center;
+  padding: 5px 0;
+}
+.preview-products .price_totals tbody tr th {
+  border-left: 1px solid #e7e7e7;
+}
+
+.print_win {
+  margin: 0 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=productspreview.css.map */

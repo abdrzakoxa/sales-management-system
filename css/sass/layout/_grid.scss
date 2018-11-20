@@ -1,0 +1,74 @@
+
+@for $i from 1 through 12{
+  .col-#{$i}{
+    flex: 0 0 100% / (($i * 12) / 12);
+  }
+}
+
+$i : 0;
+@each $media in $mediaListToUp {
+  @include media-to-up(#{$media}) {
+    @for $i from 1 through 12 {
+      $val: 100% / (($i * 12) / 12);
+      .col-#{$media}-up-#{$i} {
+        flex: 0 0 $val;
+        max-width: $val;
+        $i: $i+ 1;
+
+      }
+    }
+  }
+}
+
+
+$i : 0;
+@each $media in $mediaListToDown {
+  @include media-to-down(#{$media}) {
+    @for $i from 1 through 12 {
+      $val: 100% / (($i * 12) / 12);
+      .col-#{$media}-down-#{$i} {
+        flex: 0 0 $val;
+        max-width: $val;
+        $i: $i+ 1;
+      }
+    }
+  }
+}
+
+
+$i : 0;
+@each $media in $mediaListToOnly {
+  @include media-to-only(#{$media}) {
+    @for $i from 1 through 12 {
+      $val: 100% / (($i * 12) / 12);
+      .col-#{$media}-only-#{$i} {
+        flex: 0 0 $val;
+        max-width: $val;
+        $i: $i+ 1;
+
+      }
+    }
+  }
+}
+
+
+.d-flex{
+  @include crossManyValue(display , flex box flexbox , webkit webkit ms);
+}
+
+.f-wrap{
+  flex-wrap: wrap;
+}
+
+.f-row{
+  @include crossProperty(flex-wrap , wrap , webkit ms, !important );
+  @include crossManyValue(display , flex box  flexbox , webkit webkit ms,!important);
+}
+
+
+// col
+
+.col-1{
+  border-left: none !important;
+  border-right: none !important;
+}

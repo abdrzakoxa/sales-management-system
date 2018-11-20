@@ -1,0 +1,81 @@
+.invoice-products {
+  max-width: 800px;
+  margin: auto;
+}
+.invoice-products .print_box {
+  background-color: #fff;
+  border: 1px solid #e7e7e7;
+  padding: 5px;
+}
+.invoice-products .invoice-info {
+  text-align: end;
+}
+.invoice-products .company-info span {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.invoice-products .company-name-head {
+  text-align: center;
+  padding: 20px 0 10px 0;
+  font-family: cursive;
+  font-size: 72px;
+  color: #404040;
+}
+.invoice-products .client-info {
+  margin-bottom: 15px;
+}
+.invoice-products .client-info span {
+  margin-left: 10px;
+  margin-right: 0;
+}
+.invoice-products .client-info h2 {
+  padding: 0 12px 12px;
+}
+.invoice-products .client-info, .invoice-products .company-info, .invoice-products .invoice-info {
+  padding: 10px 10px 0;
+}
+.invoice-products .client-info span, .invoice-products .company-info span, .invoice-products .invoice-info span {
+  display: block;
+  line-height: 1.5;
+}
+.invoice-products .table-custom {
+  border: 1px solid #e7e7e7;
+  width: 100%;
+  border-collapse: collapse;
+}
+.invoice-products .table-custom thead {
+  border-bottom: 1px solid #e7e7e7;
+}
+.invoice-products .table-custom thead tr th {
+  padding: 5px 0;
+}
+.invoice-products .table-custom tbody tr td {
+  text-align: center;
+  padding: 5px 0;
+}
+.invoice-products .price_totals {
+  border-collapse: collapse;
+  margin-top: 15px;
+  border: 1px solid #e7e7e7;
+  border-bottom: 0;
+  width: 50%;
+}
+.invoice-products .price_totals tbody tr {
+  border-bottom: 1px solid #e7e7e7;
+}
+.invoice-products .price_totals tbody tr td, .invoice-products .price_totals tbody tr th {
+  text-align: center;
+  padding: 5px 0;
+}
+.invoice-products .price_totals tbody tr th {
+  border-left: 1px solid #e7e7e7;
+}
+
+.print_win {
+  margin: 0 !important;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/*# sourceMappingURL=invoicepreview.css.map */

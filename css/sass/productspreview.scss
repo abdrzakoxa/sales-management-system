@@ -1,0 +1,102 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+
+.preview-products{
+  max-width: 800px;
+  margin: auto;
+
+  .box-content {
+    background-color: #fff;
+    border: 1px solid $borderInputColor;
+    padding: 5px;
+    width: 100%;
+    .bar-code{
+      text-align: center;
+    }
+    .property_products{
+      padding: 10px;
+    }
+  }
+
+  .invoice-info{
+    text-align: end;
+
+  }
+
+  .company-info{
+    span{
+      margin-right: 10px;
+    }
+
+  }
+  .company-name-head{
+    text-align: center;
+    padding: 20px 0 10px 0;
+    color: $grayColor;
+  }
+
+  .client-info{
+    margin-bottom: 15px;
+    span{
+      margin-right: 10px;
+    }
+  }
+
+  .client-info, .company-info, .invoice-info{
+    padding: 10px 10px 0 ;
+    span{
+      display: block;
+      line-height: 1.5;
+    }
+
+  }
+  .table-custom {
+    border: 1px solid $borderInputColor;
+
+    border-collapse: collapse;
+    thead {
+      border-bottom: 1px solid $borderInputColor;
+      tr {
+        th {
+          padding: 5px 0;
+        }
+      }
+    }
+    tbody {
+      tr {
+        td {
+          text-align: center;
+          padding: 5px 0;
+        }
+      }
+    }
+
+  }
+  .price_totals{
+    border-collapse: collapse;
+    margin-top: 15px;
+    border: 1px solid $borderInputColor;
+    border-bottom: 0;
+    tbody{
+      tr{
+        border-bottom: 1px solid $borderInputColor;
+        td,th{
+          text-align: center;
+          padding: 5px 0;
+        }
+        th{
+          border-left: 1px solid $borderInputColor;
+        }
+      }
+    }
+  }
+
+}
+.print_win{
+  margin: 0!important;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+

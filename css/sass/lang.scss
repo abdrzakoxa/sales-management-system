@@ -1,0 +1,340 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+@import 'components/_buttons';
+@import 'components/_inpute';
+
+
+.side-menu {
+  right: 0;
+  .menu , ul{
+    >li {
+      &::after {
+        left: unset;
+        right: -4px;
+      }
+      &:hover:after {
+        left: unset;
+        right: 0;
+
+      }
+    }
+    li{
+      a {
+        i{
+          padding-right: unset;
+          padding-left: 10px;
+        }
+        .icon-to-down{
+          float: left;
+        }
+      }
+      ul{
+        li a{
+          padding-left: unset;
+          padding-right: 25px;
+        }
+
+      }
+    }
+  }
+}
+
+.up-menu {
+  left: 0;
+  right: unset;
+  .menu-end{
+    float: left;
+    margin-right: unset;
+    margin-left: 25px;
+    .profile-cog{
+      margin-right: unset;
+    }
+    >.profile-cog, .notifications > i ,  > i , > a, .notifications, .notifications span > i , #scanner-barcode{
+      margin: 0; // lang
+    }
+
+    >span ,  >i , >.profile-cog , >a , #scanner-barcode,.notifications{
+      margin-right: unset;
+      margin-left: 20px;
+    }
+  }
+  .control-menu{
+    margin-left: unset;
+    margin-right: 20px;
+  }
+}
+
+// products
+
+.action-product {
+  .action-close {
+    left: 0;
+    right: unset;
+  }
+}
+
+
+body{
+  float: left;
+}
+
+body{
+  width: 82%;
+}
+
+
+.close{ // lang
+  left: unset;
+  right: -18%;
+}
+
+.control-menu.fa-chevron-left {
+  @include crossProperty(transform, rotate(180deg), webkit moz ms o);
+}
+
+.control-menu.fa-chevron-right {
+  @include crossProperty(transform, rotate(180deg), webkit moz ms o);
+}
+
+
+.active::after{
+  right: 0 !important;
+}
+
+
+// classis
+
+.b-primary-upt{
+  float: left;
+  &:not(:first-child){
+    margin-right: 0;
+    margin-left: 16px;
+  }
+
+}
+
+.form-title{
+  left: unset !important;
+  right: 13px;
+}
+
+
+// inputs
+
+.form-style {
+  .form-title{
+    left: unset;
+    right: 13px
+  }
+}
+
+.input-group-s {
+  @include media-to-down('lg') {
+    &:nth-child(odd) {
+      border-left: none;
+      border-right: $borderInput;
+    }
+  }
+  &:after{
+    right: unset;
+    left: 6px;
+  }
+  label, span {
+    left: unset;
+    right: 0;
+    margin-left: 0px;
+    margin-right: 12px;
+  }
+
+  .is_focus {
+    top: -20px;
+    right: -5px;
+    left: unset;
+  }
+  &.radio-g {
+    .checkmark-p {
+      .checkmark-c {
+        margin: 0 11px 0 3px;
+      }
+
+    }
+  }
+}
+.input-submit-p{
+  input , button{
+    float: left;
+  }
+}
+
+// table edite lang
+
+
+
+table.dataTable{
+  tbody{
+    td{
+      &:last-child a{
+        &:first-child{
+          margin-right: 0;
+          margin-left: 4px;
+        }
+        &:last-child{
+          margin-left: 0;
+          margin-right: 4px;
+        }
+      }
+
+    }
+
+    tr:last-child td{
+      border-bottom: none !important;
+
+    }
+  }
+
+}
+
+.Messenger{
+  .fa-times{
+    left: 14px;
+    right: unset;
+  }
+}
+
+
+// card : 2 edit floats only
+.card{
+  .card-header{
+    .card-header-control{
+      float: left; /// changed in lang thanks
+    }
+  }
+  .card-body{
+    .card-category{
+      .card-control {
+        right: unset;
+        left: -40px; // CHANGE TO right
+      }
+      &:hover{
+        & .card-control{
+          right: unset;
+          left: 10px;
+        }
+      }
+    }
+  }
+}
+
+// end cards
+
+// notifications
+
+
+.notification-box-box {
+  left: 50px;
+  right: unset;
+
+  p {
+    margin: 4px 5px 10px 0;
+  }
+
+  .close-not {
+    right: unset;
+    left: 12px;
+  }
+}
+
+
+// index dashboard
+
+
+.chart-parent{
+  .chart-counts{
+    .chart-number{
+      float: right; // lang
+    }
+    .chart-text{
+      left: unset;
+      right: 6px;
+    }
+    i{
+      right: unset; // lang
+      left: 14px; // lang
+    }
+  }
+
+}
+
+
+
+.charts-js{
+  .chart-box:not(.chart-calender) {
+    .chart-content {
+      .dash-quick-links {
+        .quick-link {
+          float: right;
+
+        }
+
+      }
+    }
+  }
+}
+
+
+// sprofile
+
+
+.input-image-profile {
+  @include crossProperty(transform, translateX(50%), webkit moz ms o);
+  right: 50%;
+}
+
+
+
+@include media-to-down('sm'){
+
+
+  .close{ // lang
+    right: -50%;
+  }
+
+  body{
+    width: 100%;
+  }
+
+}
+
+// invoice
+
+
+.invoice-products{
+  .company-info{
+    span{
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+  .client-info{
+    span{
+      margin-right: 10px;
+      margin-left: 0;
+    }
+  }
+
+}
+
+
+
+// key frames
+
+@keyframes errorInputSubmit {
+  0% {left: 6px;right: unset;}
+  25% {left: 10px;right: unset;}
+  50% {left: 2px;right: unset;}
+  100% {left: 10px;right: unset;}
+}
+
+
+

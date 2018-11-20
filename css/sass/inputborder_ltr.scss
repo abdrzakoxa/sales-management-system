@@ -1,0 +1,109 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+
+.input-group-s {
+
+  border-left: none;
+  border-right: none;
+  @for $i from 1 through 12 {
+    @each $media in $mediaListToDown {
+      @include media-to-down(#{$media}) {
+        &.col-#{$media}-down-#{$i} {
+          @if $i == 1 {
+            border-left: none !important;
+            border-right: none !important;
+          } @else if ($i == 2 or $i == 4 or $i == 6 or $i == 8 or $i == 10 or $i == 12) {
+            &:nth-of-type(odd) {
+              border-right: none;
+              border-left: $borderInput;
+            }
+          } @else if ($i == 3) {
+            $n: 2;
+            @for $b from 1 through 4 {
+              &:nth-of-type(#{$n}) {
+                border-left: $borderInput;
+                border-right: $borderInput;
+              }
+              $n: $n + 3;
+              $b: $b + 1;
+            }
+          }
+          // if you need add 6 and 12 your ...
+        }
+      }
+    }
+    @each $media in $mediaListToUp {
+      @include media-to-up(#{$media}) {
+        &.col-#{$media}-up-#{$i} {
+          @if $i == 1 {
+            border-left: none;
+            border-right: none;
+          } @else if ($i == 2 or $i == 4 or $i == 6 or $i == 8 or $i == 10 or $i == 12) {
+            &:nth-of-type(odd) {
+              border-left: none;
+              border-right: $borderInput;
+            }
+          } @else if ($i == 3) {
+            $n: 2;
+            border-left: none !important;
+            border-right: none !important;
+            @for $b from 1 through 4 {
+              &:nth-of-type(#{$n}) {
+                border-left: $borderInput !important;
+                border-right: $borderInput !important;
+              }
+              $n: $n + 3;
+              $b: $b + 1;
+            }
+          }
+          // if you need add 6 and 12 your ...
+        }
+      }
+    }
+    @each $media in $mediaListToOnly {
+      @include media-to-only(#{$media}) {
+        &.col-#{$media}-only-#{$i} {
+          border-left: none;
+          border-right: none;
+          @if $i == 1 {
+            border-left: none;
+            border-right: none;
+          } @else if ($i == 2 or $i == 4 or $i == 6 or $i == 8 or $i == 10 or $i == 12) {
+            &:nth-of-type(odd) {
+              border-right: none;
+              border-left: $borderInput;
+            }
+          } @else if ($i == 3) {
+            $n: 2;
+            @for $b from 1 through 4 {
+              &:nth-of-type(#{$n}) {
+                border-left: $borderInput;
+                border-right: $borderInput;
+              }
+              $n: $n + 3;
+              $b: $b + 1;
+            }
+          }
+          // if you need add 6 and 12 your ...
+        }
+      }
+    }
+    $i: $i+ 1;
+  }
+
+}
+
+.input-group-s.col-3 {
+
+  $n: 2;
+  @for $b from 1 through 4 {
+    &:nth-of-type(#{$n}) {
+      border-left: $borderInput;
+      border-right: $borderInput;
+    }
+    $n: $n + 3;
+    $b: $b + 1;
+  }
+
+}

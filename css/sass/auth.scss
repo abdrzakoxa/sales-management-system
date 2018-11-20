@@ -1,0 +1,47 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+@import 'components/_buttons';
+@import 'components/_inpute';
+@import 'layout/_content.scss';
+@import 'layout/_all.scss';
+@import 'layout/_classes.scss';
+@import 'layout/_grid.scss';
+
+body{
+  width: 100% !important;
+}
+
+.cover-login{
+  width: 100%;
+  height: 100%;
+  background: lighten($mainColor,10%);
+}
+
+.form-login{
+  @include crossProperty(box-shadow, 0 0 20px #ffffffd9,webkit moz);
+  padding: 20px 13px;
+  border-radius: 3px;
+  position: relative;
+  background: #fff;
+  max-width: 420px;
+  margin: auto;
+  top: 50%;
+  @include crossProperty(transform,translateY(-50%), webkit moz ms o);
+  .avatar{
+    width: 100%;
+    padding: 0 0 13px 0;
+    img{
+      margin: auto;
+    }
+  }
+}
+
+.title-login{
+  margin: auto;
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #696969;
+  position: relative;
+
+}

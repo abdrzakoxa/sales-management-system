@@ -1,0 +1,283 @@
+@import 'helpers/_variables.scss';
+@import 'helpers/_functions.scss';
+@import 'helpers/_mixins.scss';
+
+
+.chart_parent{
+  width: 400px;
+  height: 400px;
+}
+
+
+
+
+.chart-parent{
+  margin: auto -5px;
+  margin-top: 5px;
+  *{
+    @include crossProperty(user-select, none, webkit moz ms);
+  }
+  .chart-counts{
+    position: relative;
+    padding: 14px;
+    background: #3498db;
+    margin: 5px;
+    height: 100;
+    border-radius: 4px;
+    .line-number{
+      align-items: center;
+      white-space: nowrap;
+      height: 100%;
+    }
+    .chart-number{
+      font-size: 40px;
+      float: left; // lang
+      color: rgba(#fff,.8);
+    }
+    .chart-text{
+      color: rgba(#000,0.5);
+      //line-height: 85px;
+      position: relative;
+      left: 6px;
+      top: 5px;
+      font-size: small;
+    }
+    i{
+      right: 14px; // lang
+      font-size: 70px;
+      color: rgba(#000,.1);
+      position: absolute;
+    }
+  }
+  .total-sales{
+    background-color: #2ecc71;
+    @include crossProperty(box-shadow , inset 0 0 5px darken(#2ecc71,10%) , webkit webkit ms o);
+
+  }
+  .total-purchases{
+    background-color: #3498db;
+    @include crossProperty(box-shadow , inset 0 0 5px darken(#3498db,10%) , webkit webkit ms o);
+
+  }
+  .total-clients{
+    background-color: #e74c3c;
+    @include crossProperty(box-shadow , inset 0 0 5px darken(#e74c3c,10%) , webkit webkit ms o);
+
+  }
+  .total-suppliers{
+    background-color: #f39c12;
+    @include crossProperty(box-shadow , inset 0 0 5px darken(#f39c12,10%) , webkit webkit ms o);
+
+  }
+}
+
+.charts-js{
+  grid-template-columns: 35% 35% 30%;
+  margin: auto -5px;
+  .chart-box:not(.chart-calender) {
+    background: #fff;
+    margin: 5px;
+    @include crossProperty(box-shadow, 0 3px 8px rgba(#000,.25) , webkit webkit ms o);
+
+    .chart-content {
+      padding: 10px 25px;
+      .dash-quick-links{
+        justify-content: space-around;
+        .quick-link{
+          display: inline-block;
+          float: left;
+          text-align: center;
+          color: #fff;
+          padding: 19px 0;
+          @include crossProperty(transition, all .3s, webkit moz ms o);
+          i{
+            font-size: 20px;
+            display: block;
+          }
+          span{
+            font-size: 14px;
+          }
+          &:nth-of-type(1) {
+            background: #8e44ad;
+            @include crossProperty(box-shadow , inset 0 0 5px darken(#8e44ad,10%) , webkit webkit ms o);
+            &:hover{
+              background-color: darken(#8e44ad,4%);
+            }
+          }
+          &:nth-of-type(2) {
+            background: #2980b9;
+            @include crossProperty(box-shadow , inset 0 0 5px darken(#2980b9,10%) , webkit webkit ms o);
+            &:hover{
+              background-color: darken(#2980b9,4%);
+            }
+          }
+          &:nth-of-type(3) {
+            background: #1abc9c;
+            @include crossProperty(box-shadow , inset 0 0 5px darken(#1abc9c,10%) , webkit webkit ms o);
+            &:hover{
+              background-color: darken(#1abc9c,4%);
+            }
+          }
+          &:nth-of-type(4) {
+            background: #2c3e50;
+            @include crossProperty(box-shadow , inset 0 0 5px darken(#2c3e50,10%) , webkit webkit ms o);
+            &:hover{
+              background-color: darken(#2c3e50,4%);
+            }
+          }
+          &:nth-of-type(5) {
+            background: #c0392b;
+            @include crossProperty(box-shadow , inset 0 0 5px darken(#c0392b,10%) , webkit webkit ms o);
+            &:hover{
+              background-color: darken(#c0392b,4%);
+            }
+          }
+          &:nth-of-type(6) {
+            background: #27ae60;
+            @include crossProperty(box-shadow , inset 0 0 5px darken(#27ae60,10%) , webkit webkit ms o);
+            &:hover{
+              background-color: darken(#27ae60,4%);
+            }
+          }
+          &:nth-of-type(7) {
+            background: #cd6133;
+            @include crossProperty(box-shadow , inset 0 0 5px darken(#cd6133,10%) , webkit webkit ms o);
+            &:hover{
+              background-color: darken(#cd6133,4%);
+            }
+          }
+          &:nth-of-type(8) {
+            background: #474787;
+            @include crossProperty(box-shadow , inset 0 0 5px darken(#474787,10%) , webkit webkit ms o);
+            &:hover{
+              background-color: darken(#474787,4%);
+            }
+          }
+        }
+        
+      }
+    }
+    .last-sales-content{
+      padding: 0;
+    }
+    .chart-title{
+      background: #fafafa;
+      padding: 10px 22px;
+      color: $grayColor;
+      @include crossProperty(box-shadow, 0 1px 2px rgba(#000,.25) , webkit webkit ms o);
+    }
+
+  }
+  .chart-left{
+    >div {
+      margin: 0 0 10px 0 !important;
+
+    }
+
+  }
+  .quick-links{
+    grid-area: 1/1/1 span / 3 span;
+    align-self: center;
+
+  }
+  .info-sales{
+    grid-area: 2/1/1 span / 2 span;
+    align-self: start;
+
+  }
+  .chart-left{
+    grid-area: 2/3/4 span/1 span;
+    align-self: start;
+    margin: 5px;
+  }
+  .last-sales{
+    grid-area: 3/1/2 span / 2 span;
+    align-self: start;
+  }
+  .best-sales{
+    grid-area: 5/2/1 span/1 span;
+    align-self: start;
+  }
+  .expenses-profits{
+    grid-area: 5/1/1 span/1 span;
+    align-self: start;
+  }
+
+}
+
+.pignose-calendar {
+  width: 100%;
+  max-width: 100%;
+}
+
+// table
+
+.table-custom {
+  width: 100%;
+  border-collapse: collapse;
+  thead {
+    border-bottom: 1px solid $borderInputColor;
+    tr {
+      th {
+        padding: 5px 0;
+      }
+    }
+  }
+  tbody {
+    tr {
+      td {
+        text-align: center;
+        padding: 5px 0;
+      }
+    }
+  }
+
+}
+
+
+// top / right / top span right span
+
+
+/// grid
+
+
+
+
+@include media-to-down('md') {
+  .charts-js {
+    .quick-links {
+      grid-area: 1/1/1 span / 3 span;
+      align-self: center;
+
+    }
+    .chart-left {
+      grid-area: 2/1/1 span / 3 span;
+      align-self: start;
+      margin: 5px;
+    }
+
+    .last-sales {
+      grid-area: 3/1/1 span/3 span;
+      align-self: start;
+    }
+    .best-sales {
+      grid-area: 4/1/1 span/3 span;
+      align-self: start;
+    }
+    .info-sales {
+      grid-area: 5/1/1 span / 3 span;
+      align-self: start;
+
+    }
+    .expenses-profits {
+      grid-area: 6/1/1 span/3 span;
+      align-self: start;
+    }
+  }
+}
+
+
+
+
+
+
