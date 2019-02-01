@@ -20,14 +20,26 @@ class JsonController extends AbsController
 
     public function SettingsAction()
     {
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode(Settings::get_all(),JSON_UNESCAPED_UNICODE);
+        try{
+			header('Content-Type: application/json; charset=utf-8');
+			$setting = empty(Settings::get_all()) ? [] : Settings::get_all();
+			if (isset($setting['database'])){
+				unset($setting['database']);
+			}
+			echo json_encode($setting,JSON_UNESCAPED_UNICODE);
+		}
+		catch (\Exception $e){
+			header('Content-Type: application/json; charset=utf-8');
+			echo json_encode(['empty'],JSON_UNESCAPED_UNICODE);
+		}
+
     }
 
     public function InformationDashboardAction()
     {
-        $this->Language->load('index.default');
 
+        try{
+		$this->Language->load('index.default');
         $std = new \stdClass();
         $std->Users_count = UsersModel::count();
         $std->Suppliers_count = SuppliersModel::count();
@@ -73,16 +85,17 @@ class JsonController extends AbsController
         $std->profit_expanses->label = [$this->Language->get('text_profit_in') . ' ( ' . Currency::decimal_symbol() . ' )' , $this->Language->get('text_expanded_in') . ' ( ' . Currency::decimal_symbol() . ' )'];
         $std->profit_expanses->data   = $expanses;
 
+		header('Content-Type: application/json; charset=utf-8');
+		echo json_encode($std,JSON_UNESCAPED_UNICODE);
+
+		}
+		catch (\Exception $e){
+			header('Content-Type: application/json; charset=utf-8');
+			echo json_encode(['empty'],JSON_UNESCAPED_UNICODE);
+		}
 
 
-        header('Content-Type: application/json; charset=utf-8');
-        echo json_encode($std,JSON_UNESCAPED_UNICODE);
 
-
-    }
-
-    public function productsAction(){
-        echo 'Ho oo';
     }
 
     public static function CurrencyAction($par = null,$return = false,$tchek = true)
