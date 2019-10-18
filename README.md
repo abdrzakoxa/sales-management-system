@@ -20,3 +20,6 @@
 ## Explanatory Video
 - **[Explanatory Video](https://www.youtube.com/watch?v=83WSXCbQKIE)**
 
+## Support Me
+- **[Paypal](https://www.paypal.me/abderrazakoxa)**
+
